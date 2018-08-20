@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HelloWorld
 {
-    class Message
+    public class Message
     {
         private int morning = 9;
         private int afternoon = 13 ;
