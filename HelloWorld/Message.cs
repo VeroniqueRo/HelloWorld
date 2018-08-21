@@ -11,20 +11,34 @@ namespace HelloWorld
         private int morning = 9;
         private int afternoon = 13 ;
         private int evening = 18;
+        private IDateTime userDate;
 
-        public Message(int matin, int aprem, int soir)
+
+        //public Message(int matin, int aprem, int soir)
+        //{
+        //    morning = matin;
+        //    afternoon = aprem;
+        //    evening = soir;
+        //}
+
+        public Message()
+            :this(new RealDateTime())
         {
-            morning = matin;
-            afternoon = aprem;
-            evening = soir;
+
         }
-    
-        public void GetHelloMessage()
+
+        public Message(IDateTime date)
         {
+            userDate = date;
+        }
+
+        
+        public string GetHelloMessage()
+        {
+            string message = string.Empty;// Identique à : (string message = "";)
             String userName = System.Environment.UserName;
-            DateTime userDate = DateTime.Now;// Récupère la date du jour
-            DayOfWeek userDay = userDate.DayOfWeek; // Donne le jour correspondant à la date du jour
-            int userTime = userDate.Hour;// Donne l'heure courante
+            DayOfWeek userDay = userDate.Date.DayOfWeek; // Donne le jour correspondant à la date du jour
+            int userTime = userDate.Date.Hour;// Donne l'heure courante
 
             if (
                 (userDay == DayOfWeek.Saturday) || (userDay == DayOfWeek.Sunday)
@@ -32,26 +46,25 @@ namespace HelloWorld
                 || (userDay == DayOfWeek.Monday && userTime< morning)
                 )
             {
-                Console.WriteLine("Bon week-end " + userName + " ! ");
+                message = "Bon week-end " + userName + " ! ";
             }
             else
             {
                 if (userTime > evening)
                 {
-                    Console.WriteLine("Bonsoir " + userName + " ! ");
+                    message = "Bonsoir " + userName + " ! ";
                 }
                 else if (userTime >= afternoon)
                 {
-                    Console.WriteLine("Bon après-midi " + userName + " ! ");
+                    message = "Bon après-midi " + userName + " ! ";
                 }
                 else if (userTime >= morning)
                 {
-                    Console.WriteLine("Bonjour " + userName + " ! ");
+                    message = "Bonjour " + userName + " ! ";
                 }
             }
 
-            Console.WriteLine("Jour : " + userDay);
-            Console.WriteLine("Heure : " + userTime);
+            return message;            
         }
     }
 }

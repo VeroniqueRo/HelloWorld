@@ -12,15 +12,20 @@ namespace HelloWorld.Tests
     public class MessageTests
     {
         [TestMethod()]
-        public void MessageTest()
+        public void GetUserNameTest()
         {
-            Assert.Fail();
+            Message target = new Message(); // Etant donné l'instanciation d'un nouveau message
+            String result = target.GetHelloMessage();// Lorsque on appelle la méthode GetHelloMessage
+            Assert.IsTrue(result.Contains("veronique.rouault"));// Alors le nom de l'utilistaur de l'ordinateur s'affiche
         }
 
         [TestMethod()]
-        public void GetHelloMessageTest()
+        public void GetBonjourTest()
         {
-            Assert.Fail();
+           
+            Message target = new Message(new FakeDateTime()); // Etant donné l'instanciation d'un nouveau message
+            String result = target.GetHelloMessage();// Lorsque on appelle la méthode GetHelloMessage
+            Assert.IsTrue(result.Contains("Bonjour"));// Alors le nom de l'utilistaur de l'ordinateur s'affiche
         }
     }
 }
