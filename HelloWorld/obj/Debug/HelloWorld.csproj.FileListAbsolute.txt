@@ -4,3 +4,4 @@ C:\Users\veronique.rouault\source\repos\HelloWorld\HelloWorld\bin\Debug\HelloWor
 C:\Users\veronique.rouault\source\repos\HelloWorld\HelloWorld\obj\Debug\HelloWorld.csproj.CoreCompileInputs.cache
 C:\Users\veronique.rouault\source\repos\HelloWorld\HelloWorld\obj\Debug\HelloWorld.exe
 C:\Users\veronique.rouault\source\repos\HelloWorld\HelloWorld\obj\Debug\HelloWorld.pdb
+C:\Users\veronique.rouault\source\repos\HelloWorld\HelloWorld\obj\Debug\HelloWorld.csprojAssemblyReference.cache

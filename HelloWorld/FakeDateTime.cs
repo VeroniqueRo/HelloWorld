@@ -8,9 +8,17 @@ namespace HelloWorld
 {
     public class FakeDateTime : IDateTime
     {
+
+        public DateTime _dateToReturn;
+
+        public FakeDateTime(DateTime dateToReturn)
+        {
+            _dateToReturn = dateToReturn;
+        }
+
         public DateTime Date
         {
-            get { return new DateTime(2018, 8, 21, 10, 47, 0); }
+            get { return _dateToReturn; }
         }
 
     }

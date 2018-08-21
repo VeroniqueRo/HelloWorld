@@ -10,7 +10,7 @@ namespace HelloWorld
     {
         private int morning = 9;
         private int afternoon = 13 ;
-        private int evening = 18;
+        private int evening = 17;
         private IDateTime userDate;
 
 
@@ -21,13 +21,13 @@ namespace HelloWorld
         //    evening = soir;
         //}
 
-        public Message()
+        public Message() // Constructeur avec date du jour
             :this(new RealDateTime())
         {
 
         }
 
-        public Message(IDateTime date)
+        public Message(IDateTime date) // Constructeur avec injection de dépendance 
         {
             userDate = date;
         }
