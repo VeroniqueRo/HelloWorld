@@ -14,7 +14,7 @@ namespace HelloWorld
             do
             {
                 Message welcome = new Message(new RealDateTime());
-                Console.WriteLine(welcome.GetHelloMessage());
+                Console.WriteLine(welcome.GetHelloMessage()); // appelle la méthode GetHelloMessage() avec le RealDateTime
 
             } while (Console.ReadLine() != "exit");
             

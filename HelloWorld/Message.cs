@@ -27,7 +27,7 @@ namespace HelloWorld
 
         }
 
-        public Message(IDateTime date) // Constructeur avec injection de dépendance 
+        public Message(IDateTime date) // Constructeur utilisant l'interface pour les tests
         {
             userDate = date;
         }
@@ -37,7 +37,7 @@ namespace HelloWorld
         {
             string message = string.Empty;// Identique à : (string message = "";)
             String userName = System.Environment.UserName;
-            DayOfWeek userDay = userDate.Date.DayOfWeek; // Donne le jour correspondant à la date du jour
+            DayOfWeek userDay = userDate.Date.DayOfWeek; // Donne le nom du jour correspondant à la date du jour
             int userTime = userDate.Date.Hour;// Donne l'heure courante
 
             if (
