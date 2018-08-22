@@ -13,11 +13,11 @@ namespace HelloWorld
 
             do
             {
-                Message welcome = new Message(new RealDateTime());
+                Message welcome = new Message(new RealDateTime()); // 
                 Console.WriteLine(welcome.GetHelloMessage()); // appelle la méthode GetHelloMessage() avec le RealDateTime
 
             } while (Console.ReadLine() != "exit");
-            
+
         }
     }
 }
