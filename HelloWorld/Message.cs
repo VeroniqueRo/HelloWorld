@@ -35,7 +35,7 @@ namespace HelloWorld
         
         public string GetHelloMessage()
         {
-            string message = string.Empty;// Identique à : (string message = "";)
+            string message = String.Empty;// Identique à : (string message = "";)
             String userName = System.Environment.UserName;
             DayOfWeek userDay = userDate.Date.DayOfWeek; // Donne le nom du jour correspondant à la date du jour
             int userTime = userDate.Date.Hour;// Donne l'heure courante
